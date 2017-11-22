@@ -1,7 +1,7 @@
 {
   "name": "react-csv-to-table",
-  "version": "0.0.7",
-  "description": "React port for `http://benpickles.github.io/peity/`",
+  "version": "0.0.1",
+  "description": "React library to show a simple table",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marudhupandiyang/peity-react.git"
+    "url": "git+https://github.com/marudhupandiyang/react-csv-to-table.git"
   },
   "author": "Marudhu Pandiyan G <marudhupandiyang@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marudhupandiyang/peity-react/issues"
+    "url": "https://github.com/marudhupandiyang/react-csv-to-table/issues"
   },
-  "homepage": "https://github.com/marudhupandiyang/peity-react#readme",
+  "homepage": "https://github.com/marugidhupandiyang/react-csv-to-table#readme",
   "dependencies": {
     "babel-preset-env": "^1.6.1",
     "lodash": "^4.17.4",
