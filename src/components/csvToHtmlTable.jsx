@@ -14,11 +14,13 @@ class CsvToHtmlTable extends React.Component {
   renderTableHeader = (row) => {
     if (row) {
       return (<thead>
-              {
-                map(row, (column, i) => {
-                return (<th key={`${i}${column}`}>{column}</th>);
-                })
-              }
+        <tr>
+          {
+            map(row, (column, i) => {
+            return (<th key={`${i}${column}`}>{column}</th>);
+            })
+          }
+        </tr>
       </thead>);
     }
   };
@@ -28,9 +30,9 @@ class CsvToHtmlTable extends React.Component {
             <tbody>
             {
               map(rows, (row, i) => (
-                <tr key={i}>
+                <tr className={this.props.tableRowClassName} key={i}>
                 {
-                  map(row, (column, i) => (<td key={`${i}${column}`}>{column}</td>))
+                  map(row, (column, i) => (<td className={this.props.tableColumnClassName} key={`${i}${column}`}>{column}</td>))
                 }
                 </tr>
               ))
@@ -47,7 +49,7 @@ class CsvToHtmlTable extends React.Component {
     }
 
     return (
-      <table>
+      <table className={`csv-html-table ${this.props.tableClassName}`}>
         {this.renderTableHeader(headerRow)}
         {this.renderTableBody(rowsWithColumns)}
       </table>);
@@ -58,13 +60,19 @@ class CsvToHtmlTable extends React.Component {
 CsvToHtmlTable.defaultProps = {
   data: '',
   hasHeader: true,
-  csvDelimiter: ',',
+  csvDelimiter: '\t',
+  tableClassName: '',
+  tableRowClassName: '',
+  tableColumnClassName: '',
 };
 
 CsvToHtmlTable.propTypes = {
   data: PropTypes.string.isRequired,
   hasHeader: PropTypes.bool,
   csvDelimiter: PropTypes.string,
+  tableClassName: PropTypes.string,
+  tableRowClassName: PropTypes.string,
+  tableColumnClassName: PropTypes.string,
 };
 
 export default CsvToHtmlTable;
