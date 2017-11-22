@@ -1,5 +1,5 @@
 {
-  "name": "csv-to-table",
+  "name": "react-csv-to-table",
   "version": "0.0.7",
   "description": "React port for `http://benpickles.github.io/peity/`",
   "main": "dist/index.js",

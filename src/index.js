@@ -1,7 +1,7 @@
-import DummyComponent from './components/dummyComponent.jsx';
+import CsvToHtmlTable from './components/csvToHtmlTable.jsx';
 
 export default {
-  DummyComponent
+  CsvToHtmlTable
 }
 
-export { DummyComponent };
+export { CsvToHtmlTable };
