@@ -70,6 +70,10 @@ The above code displays a table like below which is styled using bootstrap.
 |tableColumnClassName|string|Nothing|Set the class name for each column in the table body|
 
 
+### Instructions for example
+ Checkout example [Readme](examples)
+
+
 ### Roadmap
 1. Add more features to support multiple functionalities.
 2. Make it to render millions of row easily.
