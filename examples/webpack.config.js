@@ -17,6 +17,9 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin()
-  ]
+  ],
+  devServer: {
+    contentBase: './public',
+  }
 
 }
