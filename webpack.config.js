@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 
 module.exports = {
-
+  mode: 'production',
   entry: [
     './src/index.js'
   ],
@@ -29,19 +29,19 @@ module.exports = {
       }
     }
   ],
-
   module: {
-    loaders: [
-      { exclude: /node_modules/, loader: 'babel-loader' }
-    ]
+    rules: [
+      {
+        test: /\.jsx?$/,
+        loader: "babel-loader"
+      }
+    ],
   },
-
-  node: {
-    Buffer: false
-  },
-
+  target: "web",
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin()
-  ]
-
-}
+  ],
+  optimization: {
+    minimize: true
+  }
+};
