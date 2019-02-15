@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 
 module.exports = {
-
+  mode: 'development',
   entry: [
     './src/index.js'
   ],
@@ -11,15 +11,14 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      { exclude: /node_modules/, loader: 'babel-loader' }
+    rules: [
+      {
+        test: /\.jsx?$/,
+        loader: "babel-loader"
+      }
     ]
   },
-  plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin()
-  ],
   devServer: {
     contentBase: './public',
   }
-
 }

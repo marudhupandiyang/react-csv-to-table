@@ -1,6 +1,6 @@
 import React from "react";
+import { CsvToHtmlTable } from "react-csv-to-table";
 
-import { CsvToHtmlTable } from "../../src/index";
 import { sampleData } from "./sample";
 
 export const App = () => {

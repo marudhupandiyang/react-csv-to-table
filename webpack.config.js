@@ -12,23 +12,22 @@ module.exports = {
     publicPath: '/',
     filename: 'index.js'
   },
-
-  externals: [
-    {
-      react: {
-        root: 'React',
-        commonjs2: 'react',
-        commonjs: 'react',
-        amd: 'react'
-      },
-      lodash: {
-        root: '_',
-        commonjs2: 'lodash',
-        commonjs: 'lodash',
-        amd: 'lodash',
-      }
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react',
+      umd: 'react'
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom',
+      umd: 'react-dom'
     }
-  ],
+  },
   module: {
     rules: [
       {

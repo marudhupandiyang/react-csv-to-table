@@ -6,7 +6,7 @@ const renderTableHeader = (row) => {
     return (
       <thead>
         <tr>
-          {row.map((column, i) => <th key={`${i}${column}`}>{column}</th>)}
+          {row.map((column, i) => (<th key={`${i}${column}`}>{column}</th>))}
         </tr>
       </thead>
     );
