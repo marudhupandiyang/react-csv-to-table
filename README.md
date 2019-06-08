@@ -1,8 +1,8 @@
 ## React CSV to HTML Table
 
-CSV is the simplest form of storing a tabular data. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. React csv to html table is a simple reactjs library that takes CSV file content as input and renders a simple HTML table. 
+CSV is the simplest form of storing a tabular data. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. React csv to html table is a simple reactjs library that takes CSV file content as input and renders a simple HTML table.
 
-Supports React >= v15.6.2
+Supports React >= v16.8.6 (Use older version of this library to support React v15)
 
 Blog post http://marudhupandiyang.in/react-csv-to-html-table/
 
