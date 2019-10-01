@@ -83,3 +83,4 @@ The above code displays a table like below which is styled using bootstrap.
 ### Roadmap
 1. Add more features to support multiple functionalities.
 2. Make it to render millions of row easily.
+3. Add excel like features
