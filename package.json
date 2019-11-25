@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/marugidhupandiyang/react-csv-to-table#readme",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.3"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "peerDependencies": {
     "react": "^16.8.6",

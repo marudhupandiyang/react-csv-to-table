@@ -74,6 +74,8 @@ The above code displays a table like below which is styled using bootstrap.
 |tableClassName|string|Nothing|Set the class name for the whole table|
 |tableRowClassName|string|Nothing|Set the class name for each row in the table body|
 |tableColumnClassName|string|Nothing|Set the class name for each column in the table body|
+|rowKey|function| (row, rowIdx) => `row-${rowIdx}`|If not passed, `index` of the row will be used. In case of function, the passed in function in receive row and row index as arguments as shown in default function.|
+|colKey|number or function| (col, colIdx, rowIdx) => `col-${colIdx}`| If number, the value in the column of the specified index will be used as key. In case of function, the passed in function in receive row, col index and row index as arguments as shown in default function.|
 
 
 ### Instructions for example

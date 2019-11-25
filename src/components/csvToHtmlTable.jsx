@@ -16,7 +16,7 @@ const CsvToHtmlTable = ({ data, csvDelimiter, hasHeader, tableClassName, tableRo
             {
               row.map((column, i) => (
                 <th
-                  key={`th-row-${i}-col-${column}`}
+                  key={`header-${i}`}
                 >
                   {column}
                 </th>
@@ -34,7 +34,7 @@ const CsvToHtmlTable = ({ data, csvDelimiter, hasHeader, tableClassName, tableRo
         <tbody>
           {
             rows.map((row, rowIdx) => (
-              <tr className={tableRowClassName} key={typeof(rowKey) === 'function' ? rowKey(row, rowIdx) : row[rowKey]}>
+              <tr className={tableRowClassName} key={typeof(rowKey) === 'function' ? rowKey(row, rowIdx) : rowIdx}>
                 {
                   row.map && row.map((column, colIdx) => (
                     <td
