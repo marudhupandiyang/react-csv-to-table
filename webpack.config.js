@@ -1,4 +1,5 @@
 var webpack = require('webpack')
+var package = require('./package.json');
 
 module.exports = {
   mode: 'production',
@@ -38,7 +39,18 @@ module.exports = {
   },
   target: "web",
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.BannerPlugin({
+      banner: `
+${package.name} v${package.version}
+${package.description}
+
+Copyright (c) ${(new Date()).getFullYear()} ${package.author}
+${package.homepage}
+
+Licensed under the ${package.license} license.
+`
+    }),
   ],
   optimization: {
     minimize: true
