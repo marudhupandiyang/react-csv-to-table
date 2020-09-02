@@ -76,7 +76,7 @@ The above code displays a table like below which is styled using bootstrap.
 |tableColumnClassName|string|Nothing|Set the class name for each column in the table body|
 |rowKey|function| (row, rowIdx) => `row-${rowIdx}`|If not passed, `index` of the row will be used. In case of function, the passed in function in receive row and row index as arguments as shown in default function.|
 |colKey|number or function| (col, colIdx, rowIdx) => `col-${colIdx}`| If number, the value in the column of the specified index will be used as key. In case of function, the passed in function in receive row, col index and row index as arguments as shown in default function.|
-
+|renderCell|function?| (value, colIdx, rowIdx) => String | If specified, calls the function with the column value to allow additional preprocessing of the csv's cell values|
 
 ### Instructions for example
  Checkout example [Readme](examples)
