@@ -1,7 +1,17 @@
-import React from 'react';
-import { parseCsvToRowsAndColumn } from '../utils';
+import React from "react";
+import { parseCsvToRowsAndColumn } from "../utils";
 
-const CsvToHtmlTable = ({ data, csvDelimiter, hasHeader, tableClassName, tableRowClassName, tableColumnClassName, rowKey, colKey }) => {
+const CsvToHtmlTable = ({
+  data,
+  csvDelimiter,
+  hasHeader,
+  tableClassName,
+  tableRowClassName,
+  tableColumnClassName,
+  rowKey,
+  colKey,
+  renderCell
+}) => {
   const rowsWithColumns = parseCsvToRowsAndColumn(data.trim(), csvDelimiter);
   let headerRow = undefined;
   if (hasHeader) {
@@ -41,7 +51,7 @@ const CsvToHtmlTable = ({ data, csvDelimiter, hasHeader, tableClassName, tableRo
                       className={tableColumnClassName}
                       key={typeof(rowKey) === 'function' ? colKey(row, colIdx, rowIdx) : column[colKey]}
                     >
-                      {column}
+                      {typeof renderCell === "function" ? renderCell(column, colIdx, rowIdx) : column}
                     </td>
                   ))
                 }
