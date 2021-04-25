@@ -1,5 +1,5 @@
 
-export const sampleData = `
+export const sampleData1 = `
 Model,mpg,cyl,disp,hp,drat,wt,qsec,vs,am,gear,carb
 Mazda RX4,21,6,160,110,3.9,2.62,16.46,0,1,4,4
 Mazda RX4 Wag,21,6,160,110,3.9,2.875,17.02,0,1,4,4
@@ -19,4 +19,11 @@ Cadillac Fleetwood,10.4,8,472,205,2.93,5.25,17.98,0,0,3,4
 Lincoln Continental,10.4,8,460,215,3,5.424,17.82,0,0,3,4
 Chrysler Imperial,14.7,8,440,230,3.23,5.345,17.42,0,0,3,4
 Fiat 128,32.4,4,78.7,66,4.08,2.2,19.47,1,1,4,1
+`;
+
+export const sampleData2 = `
+Animal,Colors,Size
+Bear,"White, Brown",Big
+Mouse,"White, Grey",Small
+Rabbit,"White, Grey, Black, Brown","""it depends"""
 `;
