@@ -49,7 +49,7 @@ const CsvToHtmlTable = ({
                   row.map && row.map((column, colIdx) => (
                     <td
                       className={tableColumnClassName}
-                      key={typeof(rowKey) === 'function' ? colKey(row, colIdx, rowIdx) : column[colKey]}
+                      key={typeof(colKey) === 'function' ? colKey(row, colIdx, rowIdx) : column[colKey]}
                     >
                       {typeof renderCell === "function" ? renderCell(column, colIdx, rowIdx) : column}
                     </td>
