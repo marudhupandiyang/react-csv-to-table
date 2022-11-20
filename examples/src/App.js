@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { CsvToHtmlTable } from "react-csv-to-table";
 
-import { sampleData } from "./sample";
+import { sampleData1, sampleData2 } from "./sample";
 
 export const App = () => {
+  const [sampleNumber, setSampleNumber] = useState(1);
+  const alternativeSampleNumber = sampleNumber === 1 ? 2 : 1;
+  const sampleData = sampleNumber === 1 ? sampleData1 : sampleData2;
+
   return (
     <div className="container">
 
@@ -22,6 +26,8 @@ export const App = () => {
       <pre>
       {sampleData}
       </pre>
+
+      <button onClick={() => setSampleNumber(alternativeSampleNumber)}>Switch to sample #{alternativeSampleNumber}</button>
     </div>
   );
 };
